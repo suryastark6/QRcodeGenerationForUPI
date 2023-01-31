@@ -1,0 +1,9 @@
+import pyqrcode
+import png
+from pyqrcode import QRCode
+
+url = "upi://pay?pa=7680892069@ibl&pn=surya&am=1000&cu=INR"
+url = pyqrcode.create(url)
+
+url.svg('qr.svg',)
+url.png('qr.png', scale=8)
